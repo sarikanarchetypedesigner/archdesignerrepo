@@ -1,0 +1,61 @@
+archetype (adl_version=1.4; uid=805a092c-785f-4a02-9f6a-0067df53b99c)
+	openEHR-EHR-COMPOSITION.tstconcept.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2025-09-29">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"0b0e9d4b1e28204599b8384bf2d44ca8">
+		["build_uid"] = <"3ed0f0c0-9875-32dd-8ee4-8e568c3b5c13">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- tstconcept
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {*}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			SECTION[at0001] occurrences matches {0..1} matches {*}    -- some section
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"tstconcept">
+					description = <"tstconcept">
+				>
+				["at0001"] = <
+					text = <"some section">
+					description = <"no descr">
+				>
+			>
+		>
+	>
