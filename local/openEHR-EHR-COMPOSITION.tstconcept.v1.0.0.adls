@@ -1,0 +1,62 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=805a092c-785f-4a02-9f6a-0067df53b99c; build_uid=b027f0fa-fb83-3dc5-9fb7-dd18418ad2ff)
+    openEHR-EHR-COMPOSITION.tstconcept.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["date"] = <"2025-09-29">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    lifecycle_state = <"unmanaged">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"86aefed92e4d7e1240c131a858c8515e">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+
+definition
+    COMPOSITION[id1] matches {    -- tstconcept
+        category matches {
+            DV_CODED_TEXT[id9001] matches {
+                defining_code matches {[at9000]}    -- event
+            }
+        }
+        context matches {
+            EVENT_CONTEXT[id9002] 
+        }
+        content matches {
+            SECTION[id2] occurrences matches {0..1}     -- some section
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["at9000"] = <
+                text = <"event">
+                description = <"event">
+            >
+            ["id2"] = <
+                text = <"some section">
+                description = <"no descr">
+            >
+            ["id1"] = <
+                text = <"tstconcept">
+                description = <"tstconcept">
+            >
+        >
+    >
+    term_bindings = <
+        ["openehr"] = <
+            ["at9000"] = <http://openehr.org/id/433>
+        >
+    >
